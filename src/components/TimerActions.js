@@ -4,13 +4,12 @@ import {
   resetimer,
   starttimer,
 } from "../redux/reducers/timerReducer"; // Correct action imports
-// Importing the reducer is not necessary in this component
-// import { timerReducer } from "../redux/reducers/timerReducer"; // Remove this line
-
+import { timerSelector } from "../redux/reducers/timerReducer";
 export const TimerActions = () => {
   const dispatch = useDispatch();
   // Use the correct state variable name
-  const { isRunning } = useSelector((state) => state.timerReducer);
+  const timerData = useSelector(timerSelector);
+  const { isRunning } = timerData;
 
   return (
     <div className="actions">
