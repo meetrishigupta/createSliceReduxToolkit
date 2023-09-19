@@ -1,10 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
 // change the counter actions imports
 import {
-  decrementCounter,
   incrementCounter,
-  resetCounter
-} from "../redux/actions/counterActions";
+  decrementCounter,
+  resetCounter,
+} from "../redux/reducers/timerReducer";
 
 export const CounterActions = () => {
   const dispatch = useDispatch();

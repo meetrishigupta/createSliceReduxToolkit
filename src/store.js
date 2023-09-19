@@ -1,11 +1,9 @@
-const redux = require("redux");
-
-const { timerReducer } = require("./redux/reducers/timerReducer");
-const { counterReducer } = require("./redux/reducers/counterReducer");
-
-// refactor to use configureStore
-const rootReducer = redux.combineReducers({
-  timer: timerReducer,
-  counter: counterReducer
+import { configureStore } from "@reduxjs/toolkit";
+import { counterReducer } from "./redux/reducers/counterReducer";
+import { timerReducer } from "./redux/reducers/timerReducer";
+export const store = configureStore({
+  reducer: {
+    counterReducer,
+    timerReducer,
+  },
 });
-export const store = redux.createStore(rootReducer);
