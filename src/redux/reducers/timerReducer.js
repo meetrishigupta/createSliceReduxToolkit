@@ -6,7 +6,7 @@ const INITIAL_STATE = { isRunning: false, elapsedTime: 0 };
 
 const timerSlice = createSlice({
   name: "timer",
-  INITIAL_STATE,
+  initialState: INITIAL_STATE,
   reducer: {
     starttimer: (state) => {
       state.isRunning = true;

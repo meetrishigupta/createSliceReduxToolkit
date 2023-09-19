@@ -4,12 +4,11 @@ import {
   incrementCounter,
   decrementCounter,
   resetCounter,
-} from "../redux/reducers/timerReducer";
+} from "../redux/reducers/counterReducer";
 
 export const CounterActions = () => {
   const dispatch = useDispatch();
-  // change as per the store implementation
-  const { count } = useSelector((state) => state.counter);
+  const { count } = useSelector((state) => state.counterReducer); // Use 'counterReducer' here
 
   return (
     <div className="actions">

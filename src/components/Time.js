@@ -5,7 +5,7 @@ import { increamenttimer } from "../redux/reducers/timerReducer";
 export const Time = () => {
   const dispatch = useDispatch();
   // change as per the store implementation
-  const { isRunning, elapsedTime } = useSelector((state) => state.timer);
+  const { isRunning, elapsedTime } = useSelector((state) => state.timerReducer);
 
   useEffect(() => {
     let interval;

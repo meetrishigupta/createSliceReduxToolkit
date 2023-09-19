@@ -1,15 +1,16 @@
 import { useDispatch, useSelector } from "react-redux";
-// change the timer actions imports
 import {
   pausetimer,
   resetimer,
   starttimer,
-} from "../redux/reducers/timerReducer";
+} from "../redux/reducers/timerReducer"; // Correct action imports
+// Importing the reducer is not necessary in this component
+// import { timerReducer } from "../redux/reducers/timerReducer"; // Remove this line
 
 export const TimerActions = () => {
   const dispatch = useDispatch();
-  // change as per the store implementation
-  const { isRunning } = useSelector((state) => state.timer);
+  // Use the correct state variable name
+  const { isRunning } = useSelector((state) => state.timerReducer);
 
   return (
     <div className="actions">
